@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thirteen Program</title>
+  </head>
+  <body>
+    <script>
+      // 13. Write a JavaScript function to retrieve all the names of object's own and inherited properties.
+      function getAllPropertyNames(obj) {
+        let propNames = [];
+        while (obj) {
+          propNames = propNames.concat(Object.getOwnPropertyNames(obj));
+          obj = Object.getPrototypeOf(obj);
+        }
+        return propNames;
+      }
+      const obj = {
+        foo: "bar",
+        baz: 42,
+      };
+
+      const allProps = getAllPropertyNames(obj);
+      console.log(allProps);
+    </script>
+  </body>
+</html>

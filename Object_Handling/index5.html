@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Five Program</title>
+  </head>
+  <body>
+    <script>
+      // 5. Write a JavaScript program to get the volume of a Cylinder with four decimal places using object
+      // classes.
+      // Volume of a cylinder : V = πr2h
+      // where r is the radius and h is the height of the cylinder.
+
+      class Cylinder {
+        constructor(radius, height) {
+          this.radius = radius;
+          this.height = height;
+        }
+
+        getVolume() {
+          let volume = Math.PI * this.radius ** 2 * this.height;
+          return volume.toFixed(4);
+        }
+      }
+
+      // Create a new Cylinder object
+      let myCylinder = new Cylinder(3, 5);
+
+      // Get the volume of the cylinder and print it to the console
+      console.log("The volume of the cylinder is: " + myCylinder.getVolume());
+    </script>
+  </body>
+</html>

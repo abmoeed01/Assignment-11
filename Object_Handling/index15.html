@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fifteen Program</title>
+  </head>
+  <body>
+    <script>
+      // 15. Write a JavaScript function to convert an object into a list of `[key, value]` pairs.
+      function objectToList(obj) {
+        const result = [];
+        for (const key in obj) {
+          result.push([key, obj[key]]);
+        }
+        return result;
+      }
+      const myObj = { a: 1, b: 2, c: 3 };
+      const myList = objectToList(myObj);
+      console.log(myList);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Eleven Program</title>
+  </head>
+  <body>
+    <script>
+      // 11. Write a JavaScript function to print all the methods in an JavaScript object.
+      // Test Data :
+      // console.log(all_properties(Array));
+      // ["length", "name", "arguments", "caller", "prototype", "isArray", "observe", "unobserve"]
+
+      function all_properties(obj) {
+        let props = [];
+        for (let prop in obj) {
+          if (typeof obj[prop] === "function") {
+            props.push(prop);
+          }
+        }
+        return props;
+      }
+
+      console.log(all_properties(Array));
+    </script>
+  </body>
+</html>

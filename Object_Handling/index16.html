@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sixteen Program</title>
+  </head>
+  <body>
+    <script>
+      // 16. Write a JavaScript function to get a copy of the object where the keys have become the value
+      // and the values the keys
+
+      function swapKeysAndValues(obj) {
+        const swappedObj = {};
+        for (const key in obj) {
+          swappedObj[obj[key]] = key;
+        }
+        return swappedObj;
+      }
+      const originalObj = {
+        name: "John",
+        age: 30,
+        city: "New York",
+      };
+
+      const swappedObj = swapKeysAndValues(originalObj);
+      console.log(swappedObj);
+    </script>
+  </body>
+</html>

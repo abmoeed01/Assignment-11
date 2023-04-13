@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Twelve Program</title>
+  </head>
+  <body>
+    <script>
+      // 12. Write a JavaScript function to parse an URL.
+
+      function parseUrl(url) {
+        var parser = document.createElement("a");
+        parser.href = url;
+
+        var urlObj = {
+          protocol: parser.protocol,
+          hostname: parser.hostname,
+          port: parser.port,
+          pathname: parser.pathname,
+          search: parser.search,
+          hash: parser.hash,
+        };
+
+        return urlObj;
+      }
+      var url =
+        "https://www.example.com/path/to/file.html?query1=value1&query2=value2#section1";
+
+      var parsedUrl = parseUrl(url);
+
+      console.log(parsedUrl.protocol);
+      console.log(parsedUrl.hostname);
+      console.log(parsedUrl.port);
+      console.log(parsedUrl.pathname);
+      console.log(parsedUrl.search);
+      console.log(parsedUrl.hash);
+    </script>
+  </body>
+</html>

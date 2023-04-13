@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>First Program</title>
+  </head>
+  <body>
+    <script>
+      // 1. Write a JavaScript program to list the properties of a JavaScript object
+      //   var student = {
+      //   name : "David Rayy",
+      //   sclass : "VI",
+      //   rollno : 12 };
+      //   Sample Output: name, sclass, rollno
+
+      var student = {
+        name: "David Rayy",
+        sclass: "VI",
+        rollno: 12,
+      };
+
+      // Loop through the properties of the object
+      for (var prop in student) {
+        // Check if the property exists in the object (not inherited)
+        if (student.hasOwnProperty(prop)) {
+          console.log(prop);
+        }
+      }
+    </script>
+  </body>
+</html>

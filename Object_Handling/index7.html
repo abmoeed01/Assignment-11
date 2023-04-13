@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Seven Program</title>
+  </head>
+  <body>
+    <script>
+      // 7. Write a JavaScript program which returns a subset of a string.
+      // Sample Data: dog
+      // Expected Output: ["d", "do", "dog", "o", "og", "g"]
+
+      function getSubsets(str) {
+        const subsets = [];
+
+        for (let i = 0; i < str.length; i++) {
+          for (let j = i + 1; j <= str.length; j++) {
+            const subset = str.substring(i, j);
+            subsets.push(subset);
+          }
+        }
+
+        return subsets;
+      }
+
+      // Example usage
+      const str = "dog";
+      const subsets = getSubsets(str);
+      console.log(subsets);
+    </script>
+  </body>
+</html>
